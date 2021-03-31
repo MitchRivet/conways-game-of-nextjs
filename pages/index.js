@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <Typography variant="h3" component="h1">
+        <Typography className={styles.title} component="h1" variant="h3">
           Conways Game of Life
         </Typography>
         <GameOfLife />

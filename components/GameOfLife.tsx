@@ -12,6 +12,7 @@ import {
   blankGrid,
   createRandomGrid,
   neighborChecks,
+  defaultGrid,
 } from "./constants";
 
 const useStyles = makeStyles(() => ({
@@ -37,7 +38,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 const GameOfLife: React.FC = () => {
-  const [cellGrid, setCellGrid] = useState<number[][]>(blankGrid);
+  const [cellGrid, setCellGrid] = useState<number[][]>(defaultGrid);
   const [isGameRunning, setIsGameRunning] = useState<boolean>(false);
   const [simulationInterval, setSimulationInterval] = useState<number>(500);
   const gameRunningRef = useRef(isGameRunning);
@@ -134,7 +135,7 @@ const GameOfLife: React.FC = () => {
         </div>
       </Grid>
 
-      <Grid item direction="column" spacing={2}>
+      <Grid item container direction="column" spacing={2}>
         <Grid
           container
           className={classes.padBottom}
