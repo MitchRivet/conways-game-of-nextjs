@@ -135,8 +135,14 @@ const GameOfLife: React.FC = () => {
       </Grid>
 
       <Grid item direction="column" spacing={2}>
-        <Grid item container className={classes.padBottom} spacing={3}>
-          <Grid>
+        <Grid
+          container
+          className={classes.padBottom}
+          direction="row"
+          item
+          spacing={3}
+        >
+          <Grid item>
             <Button
               variant="contained"
               color={isGameRunning ? "secondary" : "primary"}
@@ -149,7 +155,7 @@ const GameOfLife: React.FC = () => {
             </Button>
           </Grid>
 
-          <Grid>
+          <Grid item>
             <Button
               variant="contained"
               color="primary"
@@ -160,7 +166,7 @@ const GameOfLife: React.FC = () => {
             </Button>
           </Grid>
 
-          <Grid>
+          <Grid item>
             <Button
               variant="contained"
               color="secondary"
